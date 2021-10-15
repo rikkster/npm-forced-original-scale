@@ -52,7 +52,7 @@ ___
 <code>npm install forced-original-scale</code>
 2. Импортируйте функцию: вставьте в файл страницы, в самом верху 
 
-<code>var originalScale = require('original.scale.page'); </code>
+<code>var { originalScale } = require('original.scale.page'); </code>
 
 *(если используете чистый HTML+JS, вставьте в head \<scripts>сюда\</scripts>)*
 

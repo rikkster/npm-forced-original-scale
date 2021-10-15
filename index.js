@@ -1,4 +1,4 @@
-module.exports.originalScale = function ( appContainerId ) {
+module.exports = function ( appContainerId ) {
 
   var App = document.getElementById( appContainerId );
   App.style.zoom = 1 / devicePixelRatio;
