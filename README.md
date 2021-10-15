@@ -10,8 +10,12 @@
 1. Install the package:
 <code>npm install forced-original-scale</code>
 2. Import function in your page:
+
 <code>var originalScale = require('original.scale.page');</code>
+
 *(if you use clean HTML+JS, insert into "head" \<scripts>here\</scripts>)*
+
+*(if you use ECMAScript, you can use <code>import originalScale from 'forced-original-scale';</code>)*
 
 ### with HTML+JS:
 3. add before the "body" closing tag:
@@ -52,9 +56,12 @@ ___
 <code>npm install forced-original-scale</code>
 2. Импортируйте функцию: вставьте в файл страницы, в самом верху 
 
-<code>var { originalScale } = require('original.scale.page'); </code>
+<code>var originalScale = require('original.scale.page'); </code>
 
 *(если используете чистый HTML+JS, вставьте в head \<scripts>сюда\</scripts>)*
+
+
+*(Также вы можете импортировать таким образом: <code>import originalScale from 'forced-original-scale';</code> (ECMAScript))*
 
 ### Чистый HTML+JS:
 3. добавьте перед закрывающимся тэгом "body":
