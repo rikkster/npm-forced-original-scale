@@ -51,17 +51,23 @@ ___
 1. Установите пакет:
 <code>npm install forced-original-scale</code>
 2. Импортируйте функцию: вставьте в файл страницы, в самом верху 
+
 <code>var originalScale = require('original.scale.page'); </code>
+
 *(если используете чистый HTML+JS, вставьте в head \<scripts>сюда\</scripts>)*
 
 ### Чистый HTML+JS:
 3. добавьте перед закрывающимся тэгом "body":
+
 <code>\<script>
 	document.addEventListener("DOMContentLoaded",   function(event) { originalScale('container'); }
 	);
 	\</script>
-</code>где "container" это ID главного контейнера, в котором находится весь ваш HTML-код *Пример:*
+</code>
+
+где "container" это ID главного контейнера, в котором находится весь ваш HTML-код *Пример:*
 <code>\<div id="container">...ваш html...\</div></code>
+
 *(вы можете назвать его как угодно, главное чтобы это был именно id контейнера внутри которого всё находится)*
 
 ### Используя JQuery:
