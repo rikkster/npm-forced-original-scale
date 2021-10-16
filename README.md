@@ -58,12 +58,12 @@ ___
 
 #### Чтобы использовать npm-модуль в чистом HTML+JS, вам необходимо собрать его при помощи browserify в бандл
 1. Сначала установите browserify: <code>npm i -g browserify</code> *(в консоли, корневая папка проекта)*
-2. Создайте в корневой папке проекта файл index.js и напишите внутри него: <code>var originalScale = require('forced-original-scale');</code>
+2. Создайте в корневой папке проекта файл index.js и напишите внутри него:  
+<code>var originalScale = require('forced-original-scale');</code>
 3. Выполните сборку при помощи browserify: <code>browserify index.js > bundle.js</code> *(в консоли, корневая папка проекта)*
 4. Далее в вашем index.html перед закрывающимся тэгом body добавьте:
 
-<code>\<script src="bundle.js">\</script>  
-\<script>document.addEventListener("DOMContentLoaded", function() { window.originalScale('container'); } );\</script></code>
+<code>\<script src="bundle.js">\</script>\<script>document.addEventListener("DOMContentLoaded", function() { window.originalScale('container'); } );\</script></code>
  где "container" это ID главного контейнера, в котором находится весь ваш HTML-код 
 
 *Пример:*
