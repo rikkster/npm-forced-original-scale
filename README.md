@@ -11,7 +11,7 @@ RU: Описание на русском языке внизу страницы.
 <code>npm install forced-original-scale</code>
 
 #### 2. Import function in your page:
-<code>var originalScale = require('original.scale.page');</code>
+<code>var originalScale = require('forced-original-scale');</code>
 
 *(if you use clean HTML+JS, insert into "head" <code>\<scripts>...here...\</scripts>)</code>*
 
@@ -52,31 +52,30 @@ ___
 
 ## Как использовать
 
-#### 1. Установите пакет:
-<code>npm install forced-original-scale</code>
-#### 2. Импортируйте функцию: вставьте в файл страницы, в самом верху 
-<code>var originalScale = require('original.scale.page'); </code>
-
-*(если используете чистый HTML+JS, вставьте в head <code>\<scripts>...сюда...\</scripts>)</code>*
-*(Также вы можете импортировать таким образом: <code>import originalScale from 'forced-original-scale';</code> (ECMAScript))*
+#### Установите пакет: <code>npm install forced-original-scale</code>
 
 ### Чистый HTML+JS:
-#### 3. добавьте перед закрывающимся тэгом "body":
-<code>\<script> document.addEventListener("DOMContentLoaded", function() { originalScale('container'); } ); \</script></code>
+
+#### Чтобы использовать npm-модуль в чистом HTML+JS, вам необходимо собрать его при помощи browserify в бандл
+1. Сначала установите browserify: <code>npm i -g browserify</code> *(в консоли, корневая папка проекта)*
+2. Создайте в корневой папке проекта файл index.js и напишите внутри него: <code>var originalScale = require('forced-original-scale');</code>
+3. Выполните сборку при помощи browserify: <code>browserify index.js > bundle.js</code> *(в консоли, корневая папка проекта)*
+4. Далее в вашем index.html перед закрывающимся тэгом body добавьте:
+
+<code>\<script src="bundle.js">\</script>
+
+\<script>document.addEventListener("DOMContentLoaded", function() { window.originalScale('container'); } );\</script>
+</code>
 где "container" это ID главного контейнера, в котором находится весь ваш HTML-код 
 
 *Пример:*
 <code>\<div id="container">...ваш html...\</div></code>
 *(вы можете назвать его как угодно, главное чтобы это был именно id контейнера внутри которого всё находится)*
 
-### Используя JQuery:
-#### 3. <code>`$( document ).ready(function() { originalScale('container'); });`</code>
-где "container" это ID главного контейнера, в котором находится весь ваш HTML-код *Пример:*
-<code>\<div id="container">...ваш html...\</div></code>
-*(вы можете назвать его как угодно, главное чтобы это был именно id контейнера внутри которого всё находится)*
-
 ### Используя React:
-#### 3. добавьте в ваш App.jsx: 
+#### 1. Добавьте в ваш App.jsx импорт модуля
+<code>import originalScale from 'forced-original-scale';</code> 
+#### 2. Вызовите модуль, когда главный компонент будет отрисован 
 Если вы используете хуки:
 <code>useEffect(() => { originalScale('App'); }, [] );</code> 
 
