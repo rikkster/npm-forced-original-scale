@@ -63,7 +63,6 @@ ___
 4. Далее в вашем index.html перед закрывающимся тэгом body добавьте:
 
 <code>\<script src="bundle.js">\</script>
-
 \<script>document.addEventListener("DOMContentLoaded", function() { window.originalScale('container'); } );\</script>
 </code>
 где "container" это ID главного контейнера, в котором находится весь ваш HTML-код 
