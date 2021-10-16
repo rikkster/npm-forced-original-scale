@@ -62,10 +62,8 @@ ___
 3. Выполните сборку при помощи browserify: <code>browserify index.js > bundle.js</code> *(в консоли, корневая папка проекта)*
 4. Далее в вашем index.html перед закрывающимся тэгом body добавьте:
 
-<code>\<script src="bundle.js">\</script>
-\<script>document.addEventListener("DOMContentLoaded", function() { window.originalScale('container'); } );\</script>
-</code>
-где "container" это ID главного контейнера, в котором находится весь ваш HTML-код 
+<code>\<script src="bundle.js">\</script>\n\<script>document.addEventListener("DOMContentLoaded", function() { window.originalScale('container'); } );\</script></code>
+ где "container" это ID главного контейнера, в котором находится весь ваш HTML-код 
 
 *Пример:*
 <code>\<div id="container">...ваш html...\</div></code>
