@@ -7,42 +7,33 @@
 RU: Описание на русском языке внизу страницы. Этот пакет поможет вашему сайту всегда отображаться в правильном масштабе.
 
 ## How to use
-#### 1. Install the package:
-<code>npm install forced-original-scale</code>
+#### Install the package: <code>npm install forced-original-scale</code>
 
-#### 2. Import function in your page:
+### Clean HTML+JS without WebPack:
+
+#### Before using npm-package in a clean HTML+JS or PHP, you need to compile a bundle from it. It's very simple, follow the instructions:
+1. Install browserify first: <code>npm i -g browserify</code> *(in the console, the root folder of the project)*
+2. Создайте в корневой папке проекта файл index.js и напишите внутри него:  
 <code>var originalScale = require('forced-original-scale');</code>
+3. Build bundle using browserify: <code>browserify index.js > bundle.js</code> *(in the console, the root folder of the project)*
+4. In your index.html, before the closing "body" tag, add:
 
-*(if you use clean HTML+JS, insert into "head" <code>\<scripts>...here...\</scripts>)</code>*
-
-*(if you use ECMAScript, you can use <code>import originalScale from 'forced-original-scale';</code>)*
-
-### with HTML+JS:
-#### 3. add before the "body" closing tag:
-<code>\<script> document.addEventListener("DOMContentLoaded", function() { originalScale('container'); } ); \</script></code>
-
-where "container" is main container with all your pages, like 
-<code>\<div id="container">...your html...\</div></code>
+<code>\<script src="bundle.js">\</script>\<script>document.addEventListener("DOMContentLoaded", function() { window.originalScale('container'); } );\</script></code>
+where "container" is main container with all your pages, like
+<code>\<div id="container">...ваш html...\</div></code>
 *(you can name it whatever you want, as long but it want to be the id of the main component)*
 
-### with JQuery:
-#### 3. <code>`$( document ).ready(function() { originalScale('container'); });`</code>
-where "container" is main container with all your pages, like 
-<code>\<div id="container">...your html...\</div></code>
-*(you can name it whatever you want, as long but it want to be the id of the main component)*
-
-### with React:
-#### 3. add in your App.jsx: 
-
+### Using React:
+#### 1. Import the module into your App.jsx
+<code>import originalScale from 'forced-original-scale';</code> 
+#### 2. Call the module when the main component is ready
 if you use hooks:
 <code>useEffect(() => { originalScale('App'); }, [] );</code> 
 
 if you use classes:
 <code>componentDidMount() { originalScale('App'); };</code> 
 
-where "App" is main container with all your pages, like 
-<code>\<div id="App">....\</div></code>
-
+where "App" is main container with all your pages, like <code>\<div id="App">.....\</div></code>
 *(you can name it whatever you want, as long but it want to be the id of the main component)*
 ___
 # RU
@@ -56,7 +47,8 @@ ___
 
 ### Чистый HTML+JS:
 
-#### Чтобы использовать npm-модуль в чистом HTML+JS, вам необходимо собрать его при помощи browserify в бандл
+#### Чтобы использовать npm-модуль в чистом HTML+JS или PHP, вам необходимо собрать его при помощи browserify в бандл. Это очень просто, следуйте инструкции:
+
 1. Сначала установите browserify: <code>npm i -g browserify</code> *(в консоли, корневая папка проекта)*
 2. Создайте в корневой папке проекта файл index.js и напишите внутри него:  
 <code>var originalScale = require('forced-original-scale');</code>
