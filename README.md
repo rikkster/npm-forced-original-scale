@@ -36,14 +36,12 @@ where "container" is main container with all your pages, like
 
 if you use hooks:
 <code>useEffect(() => { originalScale('App'); }, [] );</code> 
-if you use classes:
 
+if you use classes:
 <code>componentDidMount() { originalScale('App'); };</code> 
 
 where "App" is main container with all your pages, like 
-<code>\<div id="App">
-	   ....
-	\</div></code>
+<code>\<div id="App">....\</div></code>
 
 *(you can name it whatever you want, as long but it want to be the id of the main component)*
 ___
@@ -86,5 +84,5 @@ ___
 <code>componentDidMount() { originalScale('App'); };</code> 
 
 где "App" это ID главного контейнера, в котором находится всё ваше приложение. *Пример:*
-<code>\<div id="App">\</div></code>
+<code>\<div id="App">.....\</div></code>
 *(вы можете назвать его как угодно, главное чтобы это был именно id контейнера внутри которого всё находится)*
