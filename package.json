@@ -1,6 +1,6 @@
 {
   "name": "forced-original-scale",
-  "version": "1.1.3",
+  "version": "1.2.0",
   "description": "Displaying the page at a scale of 1: 1 despite scaling by the operating system",
   "main": "index.js",
   "scripts": {
