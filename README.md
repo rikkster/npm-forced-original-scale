@@ -13,14 +13,14 @@ RU: Описание на русском языке внизу страницы.
 
 #### Before using npm-package in a clean HTML+JS or PHP, you need to compile a bundle from it. It's very simple, follow the instructions:
 1. Install browserify first: <code>npm i -g browserify</code> *(in the console, the root folder of the project)*
-2. Создайте в корневой папке проекта файл index.js и напишите внутри него:  
+2. Create an "index.js" file in the root folder and write in it
 <code>var originalScale = require('forced-original-scale');</code>
 3. Build bundle using browserify: <code>browserify index.js > bundle.js</code> *(in the console, the root folder of the project)*
 4. In your index.html, before the closing "body" tag, add:
 
 <code>\<script src="bundle.js">\</script>\<script>document.addEventListener("DOMContentLoaded", function() { window.originalScale('container'); } );\</script></code>
 where "container" is main container with all your pages, like
-<code>\<div id="container">...ваш html...\</div></code>
+<code>\<div id="container">...your html...\</div></code>
 *(you can name it whatever you want, as long but it want to be the id of the main component)*
 
 ### Using React:
