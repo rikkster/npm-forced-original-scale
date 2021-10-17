@@ -5,6 +5,10 @@ function originalScale( appContainerId ) {
 
 }
 
-window.originalScale = originalScale;
+try {
+
+  if ( window ) { document.window.originalScale = originalScale; }
+
+} catch (err) { }
 
 module.exports = originalScale;
